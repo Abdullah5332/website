@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>KIA</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/mdb.min.css'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src='main.js'></script>
+    <style>
+        .dropdown-menu{
+            background-color: black;
+            
+        }
+        .card{
+  
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    position: relative;
+   }
+
+   .card-img-top{
+    transform: rotateY(0);
+    transition: 0.5s;
+   }
+   .card-img-top:hover{
+    transform: rotateY(-90deg);
+   }
+
+   .content{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 30px 15px;
+    border: 1px solid white;
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    background-color: red;
+    transform: rotateY(90deg);
+    transition: 5s;
+   }
+   .card:hover .content{
+     transform: rotateY(0);
+   } 
+   .btn{
+      border: 2px solid white;
+      background-color: transparent;
+      color: white;
+      transition: 0.5s;
+    }
+    .btn:hover{
+      background-color: red;
+      color: white;
+    }
+   button{
+  background-color: transparent;
+  color: white;
+  border: 2px solid black;
+}
+.fa{
+  color: red;
+}
+        
+        </style>
+        <script>
+          var totalprice=0
+          var counter=0
+          function add2cart(price)
+          {
+            counter=counter+1
+            totalprice=totalprice+price
+            document.getElementById("demo").innerHTML=totalprice
+            document.getElementById("demo1").innerHTML=counter
+          }
+        </script>
+</head>
+<body style="background-color: rgba(0,0,0,0.795);">
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+         <img src="../img/logo3-removebg-preview.png" alt="" style="height: 55px; width: 90px;">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a style="color: white;" class="nav-link" href="gallery.html">Gallery</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a style="color: white;" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Brand
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a style="color: white;" class="dropdown-item" href="BMW.html">BMW</a></li>
+                  <li><a style="color: white;" class="dropdown-item" href="AUDI.html">AUDI</a></li>
+                  <li><a style="color: white;" class="dropdown-item" href="HYUNDAI.html">HYUNDAI</a></li>
+                  <li><a style="color: white;" class="dropdown-item" href="#">KIA</a></li>
+                  <li><a style="color: white;" class="dropdown-item" href="MORRRIS.html">MORRIS GARAGE</a></li>
+                  <li><a style="color: white;" class="dropdown-item" href="JEEP.html">JEEP</a></li>
+                  <li><a style="color: white;" class="dropdown-item" href="SUZUKI.html">SUZUKI</a></li>
+
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a style="color: white;"  class="dropdown-item" href="BENZ.html">Mercedes Benz</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a style="color: white;" class="nav-link" href="about us.html">About US</a>
+              </li>
+              <li class="nav-item">
+                <a style="color: white;" class="nav-link" href="finance.html">Finance</a>
+              </li>
+              <li class="nav-item">
+                <a style="color: white;" class="nav-link" href="contact us.html">Contact US</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-danger" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+     
+     
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../img/bg1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../img/BG5.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../img/BG8.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div><br>
+        <h3 id="demo" style="margin-top: 50px; color:white">
+
+        </h3>
+        <p id="demo1" style="color: white;">
+       
+        </p>
+       
+        <div class="container">
+          <h1 style="color: red; text-align:center" data-aos="fade-up"
+          data-aos-duration="3000">KIA COLLECTION  </h1><br>
+          <div class="row">
+            <div class="col-md-4" data-aos="fade-up"
+            data-aos-duration="3000">
+              <div class="card" style="width: 19rem;">
+                <img style="height: 250px;" he src="../img/k1.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">KIA Picanto</h5>
+                 <p class="card-text">$ 19,000</p>
+                  <a onclick="add2cart(19000)" href="#" class="btn">Buy Now</a>
+                 
+                </div>
+                <div class="content">
+                  <h2>SPECIFICATION:</h2>
+              <hr>
+              <h6>Bodytype:Hatchback</h6>
+              <h6>Dimensions:3595 x 1595 x 1490 mm</h6>
+              <h6>Transmission:Manual&Automatic</h6>
+              <h6>Fuel Type:Petrol</h6>
+              <h6>Mileage:12 - 15 KM/L</h6>
+              <h6>Top Speed:180 KM/H</h6>
+              <h6>Displacement:1000 cc</h6>
+              <h6>Kerb Weight:840 - 860 KG</h6>
+              <a href="#"><button>MORE</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up"
+            data-aos-duration="3000">
+              <div class="card" style="width: 19rem;">
+                <img style="height: 250px;" src="../img/k2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">KIA Stonic</h5>
+                 <p class="card-text">$ 19,500</p>
+                  <a onclick="add2cart(19500)" href="#" class="btn">Buy Now</a>
+                  
+                </div>
+                <div class="content">
+                  <h2>SPECIFICATION:</h2>
+              <hr>
+              <h6>Bodytype:Crossover</h6>
+              <h6>Dimensions:4140 x 1760 x 1500 mm</h6>
+              <h6>Transmission:Automatic</h6>
+              <h6>Fuel Type:Petrol</h6>
+              <h6>Mileage:12 - 16 KM/L</h6>
+              <h6>Top Speed:220 KM/H</h6>
+              <h6>Displacement:1400 cc</h6>
+              <h6>Kerb Weight:1410 KG</h6>
+              <a href="#"><button>MORE</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up"
+            data-aos-duration="3000">
+              <div class="card" style="width: 19rem;">
+                <img style="height: 250px;" src="../img/k3.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">KIA Sportage</h5>
+                 <p class="card-text">$ 20,000</p>
+                  <a onclick="add2cart(20000)" href="#" class="btn">Buy Now</a>
+                 
+                </div>
+                <div class="content">
+                  <h2>SPECIFICATION:</h2>
+              <hr>
+              <h6>Bodytype:SUV</h6>
+              <h6>Dimensions:4485 x 1855 x 1635 mm</h6>
+              <h6>Transmission:Automatic</h6>
+              <h6>Fuel Type:Petrol</h6>
+              <h6>Mileage:10 - 12 KM/L</h6>
+              <h6>Top Speed:180 KM/H</h6>
+              <h6>Displacement:2000 cc</h6>
+              <h6>Kerb Weight:1540 KG</h6>
+              <a href="#"><button>MORE</button></a>
+                </div>
+              </div>
+            </div>
+          </div><br>
+          <div class="row">
+            <div class="col-md-4" data-aos="fade-up"
+            data-aos-duration="3000">
+              <div class="card" style="width: 19rem;">
+                <img style="height: 250px;" src="../img/k4.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">KIA Sorento</h5>
+                 <p class="card-text">$ 21,000</p>
+                  <a onclick="add2cart(21000)" href="#" class="btn">Buy Now</a>
+                 
+                </div>
+                <div class="content">
+                  <h2>SPECIFICATION:</h2>
+              <hr>
+              <h6>Bodytype:Compact SUV</h6>
+              <h6>Dimensions:4800 x 1890 x 1685 mm</h6>
+              <h6>Transmission:Automatic</h6>
+              <h6>Fuel Type:Petrol</h6>
+              <h6>Mileage:8 - 12 KM/L</h6>
+              <h6>Top Speed:180 KM/H</h6>
+              <h6>Displacement:3500 cc</h6>
+              <h6>Kerb Weight:1800 KG</h6>
+              <a href="#"><button>MORE</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up"
+            data-aos-duration="3000">
+              <div class="card" style="width: 19rem;">
+                <img style="height: 250px;" src="../img/k5.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">KIA Grand Carnival</h5>
+                 <p class="card-text">$ 22,000</p>
+                  <a onclick="add2cart(22000)" href="#" class="btn">Buy Now</a>
+                 
+                </div>
+                <div class="content">
+                  <h2>SPECIFICATION:</h2>
+              <hr>
+              <h6>Bodytype:MPV</h6>
+              <h6>Dimensions:5155 x 1995 x 1740 mm</h6>
+              <h6>Transmission:Automatic</h6>
+              <h6>Fuel Type:Petrol</h6>
+              <h6>Mileage:8 - 10 KM/L</h6>
+              <h6>Top Speed:160 KM/H</h6>
+              <h6>Displacement:3500 cc</h6>
+              <h6>Kerb Weight:1984 KG</h6>
+              <a href="#"><button>MORE</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up"
+            data-aos-duration="3000">
+              <div class="card" style="width: 19rem;">
+                <img style="height: 250px;" src="../img/k6.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">KIA Rio</h5>
+                   <p class="card-text">$ 22,000</p>
+                  <a onclick="add2cart(22000)" href="#" class="btn">Buy Now</a>
+                 
+                </div>
+                <div class="content">
+                  <h2>SPECIFICATION:</h2>
+                  <hr>
+                  <h6>Bodytype:Crossover</h6>
+                  <h6>Dimensions:4252 x 1560 x 1325 mm</h6>
+                  <h6>Transmission:Automatic</h6>
+                  <h6>Fuel Type:Petrol</h6>
+                  <h6>Mileage:10 - 14 KM/L</h6>
+                  <h6>Top Speed:200 KM/H</h6>
+                  <h6>Displacement:1360 cc</h6>
+                  <h6>Kerb Weight:1480 KG</h6>
+                  <a href="#"><button>MORE</button></a>
+                </div>
+              </div>
+            </div>
+          </div><br>
+          <div class="row">
+            <div class="col-md-4" data-aos="fade-up"
+            data-aos-duration="3000">
+              <div class="card" style="width: 19rem;">
+                <img style="height: 250px;" src="../img/k7.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">KIA Cerato</h5>
+                 <p class="card-text">$ 29,000</p>
+                  <a onclick="add2cart(29000)" href="#" class="btn">Buy Now</a>
+                 
+                </div>
+                <div class="content">
+                  <h2>SPECIFICATION:</h2>
+                  <hr>
+                  <h6>Bodytype:SUV</h6>
+                  <h6>Dimensions:4360 x 1824 x 1526 mm</h6>
+                  <h6>Transmission:Manual</h6>
+                  <h6>Fuel Type:Petrol</h6>
+                  <h6>Mileage:7 - 10 KM/L</h6>
+                  <h6>Top Speed:150 KM/H</h6>
+                  <h6>Displacement:1600 cc</h6>
+                  <h6>Kerb Weight:1344 KG</h6>
+                  <a href="#"><button>MORE</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up"
+            data-aos-duration="3000">
+              <div class="card" style="width: 19rem;">
+                <img style="height: 250px;" src="../img/k8.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">KIA Classic</h5>
+                 <p class="card-text">22,000</p>
+                  <a onclick="add2cart(22000)" href="#" class="btn">Buy Now</a>
+                  
+                </div>
+                <div class="content">
+                  <h2>SPECIFICATION:</h2>
+              <hr>
+              <h6>Bodytype:Compact sedan</h6>
+              <h6>Dimensions:4525 x 1805 x 1610 mm</h6>
+              <h6>Transmission:Manual</h6>
+              <h6>Fuel Type:CNG</h6>
+              <h6>Mileage:11 - 15 KM/L</h6>
+              <h6>Top Speed:180 KM/H</h6>
+              <h6>Displacement:1300 cc</h6>
+              <h6>Kerb Weight:1050 KG</h6>
+              <a href="#"><button>MORE</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up"
+            data-aos-duration="3000">
+              <div class="card" style="width: 19rem;">
+                <img style="height: 250px;" src="../img/k9.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">KIA Spectra</h5>
+                 <p class="card-text">$ 23,000</p>
+                  <a onclick="add2cart(23000)" href="#" class="btn">Buy Now</a>
+                 
+                </div>
+                <div class="content">
+                  <h2>SPECIFICATION:</h2>
+              <hr>
+              <h6>Bodytype:Sedan</h6>
+              <h6>Dimensions:4525 x 1725 x 1425 mm</h6>
+              <h6>Transmission:Manual</h6>
+              <h6>Fuel Type:Petrol</h6>
+              <h6>Mileage:10 - 11 KM/L</h6>
+              <h6>Top Speed:180 KM/H</h6>
+              <h6>Displacement:1498-1597 cc</h6>
+              <h6>Kerb Weight:1140 KG</h6>
+              <a href="#"><button>MORE</button></a>
+                </div>
+              </div>
+            </div>
+    
+          </div><br>
+          <div class="row">
+            <div class="col-md-4" data-aos="fade-up"
+            data-aos-duration="3000">
+              <div class="card" style="width: 19rem;">
+                <img style="height: 250px;" src="../img/k10.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">KIA Pride</h5>
+                 <p class="card-text">$ 25,000</p>
+                  <a onclick="add2cart(25000)" href="#" class="btn">Buy Now</a>
+                
+                </div>
+                <div class="content">
+                  <h2>SPECIFICATION:</h2>
+              <hr>
+              <h6>Bodytype:Hatchback</h6>
+              <h6>Dimensions:3565 x 1605 x 1460 mm</h6>
+              <h6>Transmission:Manual</h6>
+              <h6>Fuel Type:Petrol</h6>
+              <h6>Mileage:7 - 9KM/L</h6>
+              <h6>Top Speed:140 KM/H</h6>
+              <h6>Displacement:1138 cc</h6>
+              <h6>Kerb Weight:850 KG</h6>
+              <a href="#"><button>MORE</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up"
+            data-aos-duration="3000">
+              <div class="card" style="width: 19rem;">
+                <img style="height: 250px;" src="../img/k11.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">KIA Niro</h5>
+                 <p class="card-text">$ 23,870</p>
+                  <a onclick="add2cart(23870)" href="#" class="btn">Buy Now</a>
+                 
+                </div>
+                <div class="content">
+                  <h2>SPECIFICATION:</h2>
+              <hr>
+              <h6>Bodytype:SUV</h6>
+              <h6>Dimensions:4356 x 1806 x 1544 mm</h6>
+              <h6>Transmission:Automatic</h6>
+              <h6>Fuel Type:Hybrid</h6>
+              <h6>Mileage:0 KM/L</h6>
+              <h6>Top Speed:180 KM/H</h6>
+              <h6>Displacement:1600 cc</h6>
+              <h6>Kerb Weight:1519 KG</h6>
+              <a href="#"><button>MORE</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up"
+            data-aos-duration="3000">
+              <div class="card" style="width: 19rem;">
+                <img style="height: 250px;" src="../img/k12.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">KIA Stinger</h5>
+                 <p class="card-text">19,500</p>
+                  <a onclick="add2cart(19500)" href="#" class="btn">Buy Now</a>
+                 
+                </div>
+                <div class="content">
+                  <h2>SPECIFICATION:</h2>
+                  <hr>
+                  <h6>Bodytype:Sedan</h6>
+                  <h6>Dimensions:4831 x 1869 x 1399 mm</h6>
+                  <h6>Transmission:Automatic</h6>
+                  <h6>Fuel Type:Petrol</h6>
+                  <h6>Mileage:6 - 10 KM/L</h6>
+                  <h6>Top Speed:220 KM/H</h6>
+                  <h6>Displacement:2500 cc</h6>
+                  <h6>Kerb Weight:1270 KG</h6>
+                  <a href="#"><button>MORE</button></a>
+                </div>
+              </div>
+            </div>
+    
+          </div>
+    
+    
+    
+    
+        </div><br>
+
+       <!-- Footer -->
+  <footer   class="text-center text-lg-start  text-muted">
+    <!-- Section: Social media -->
+    <section
+      class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+    >
+      <!-- Left -->
+      <div class="me-5 d-none d-lg-block">
+        <span style="color: white;">Get connected with us on social networks:</span>
+      </div>
+      <!-- Left -->
+      <!-- Right -->
+      <div>
+        <a href="https://www.facebook.com/carriomotorcars" class="me-4 text-reset">
+          <i class="fa fa-facebook"></i>
+        </a>
+        <a href="https://twitter.com/CarrioMotorcars" class="me-4 text-reset">
+          <i class="fa fa-twitter"></i>
+        </a>
+       
+        <a href="https://www.instagram.com/carrio_motorcars/" class="me-4 text-reset">
+          <i class="fa fa-instagram"></i>
+        </a>
+        <a href="https://www.youtube.com/channel/UCgzgqvvch3nmvvIe2TJ68eA" class="me-4 text-reset">
+          <i class="fa fa-youtube"></i>
+        </a>
+     
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+   
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 style="color: white;" class="text-uppercase fw-bold mb-4">
+              <i  class="fas fa-gem me-3"></i>Carrio Motors
+            </h6>
+            <p style="color: white;">
+              Our Company Name is CARRIO MOTORS.We Deliver Our Car in <br> the World.
+              If you want to get a <br> car so you can contact us.
+            </p>
+          </div>
+          <!-- Grid column -->
+   
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 style="color: white;" class="text-uppercase fw-bold mb-4">
+              Products
+            </h6>
+            <p style="color: white;">
+              <a style="text-decoration: none;color: white" href="./pages/JEEP.html" class="text-reset">Jeep</a>
+            </p>
+            <p style="color: white;">
+              <a style="text-decoration: none;color: white" href="./pages/BMW.html" class="text-reset">BMW</a>
+            </p>
+            <p style="color: white;">
+              <a style="text-decoration: none;color: white" href="./pages/AUDI.html" class="text-reset">AUDI</a>
+            </p>
+            <p style="color: white;">
+              <a style="text-decoration: none;color: white" href="./pages/SUZUKI.html" class="text-reset">SUZUKI</a>
+            </p>
+            <p style="color: white;">
+              <a style="text-decoration: none;color: white" href="./pages/HYUNDAI.html" class="text-reset">HYUNDAI</a>
+            </p>
+            <p style="color: white;">
+              <a style="text-decoration: none;color: white" href="#" class="text-reset">KIA</a>
+            </p>
+            <p style="color: white;">
+              <a style="text-decoration: none;color: white" href="./pages/MORRRIS.html" class="text-reset">MORRIS-GARAGE</a>
+            </p>
+          </div>
+         
+          <!-- Grid column -->
+   
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 style="color: white;" class="text-uppercase fw-bold mb-4">
+              Useful links
+            </h6>
+            <p style="color: white;">
+              <a style="text-decoration: none; " href="../home.html" class="text-reset">Home</a>
+            </p>
+            <p style="color: white;">
+              <a style="text-decoration: none;" href="./pages/gallery.html" class="text-reset">Gallery</a>
+            </p >
+            <p style="color: white;">
+              <a style="text-decoration: none;" href="./pages/about us.html" class="text-reset">About Us</a>
+            </p>
+            <p style="color: white;">
+              <a style="text-decoration: none;" href="./pages/finance.html" class="text-reset">Finance</a>
+            </p>
+            <p style="color: white;">
+              <a style="text-decoration: none;" href="./pages/contact us.html" class="text-reset">Contact Us</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+   
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 style="color: white;" class="text-uppercase fw-bold mb-4">
+              Contact
+            </h6>
+            <p style="color: white;"><i class="fa fa-home me-3"></i>GULSHAN,Block3,Karachi</p>
+            <p style="color:white">
+              <i  class="fa fa-envelope me-3"></i>Carrio@example.com</p>
+            <p style="color: white;"><i class="fa fa-phone me-3"></i> 0310-5119966</p>
+            <p style="color: white;"><i class="fa fa-print me-3"></i> 0344-4977658</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+   
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: black;">
+      © 2022 Copyright:
+      <a class="text-reset fw-bold" href="#">Car Dealers.com</a>
+    </div>
+    <!-- Copyright -->
+   </footer>
+   <!-- Footer -->
+  
+  </div>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script>
+   AOS.init();
+   </script>
+
+</body>
+</html>
